@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+.table-separated {
+  border-collapse: separate !important;
+  border-spacing: 0px 8px; /* adjust vertical spacing */
+  border: 1px solid #d1d5db; /* Tailwind gray-300 */
+}
