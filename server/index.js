@@ -10,6 +10,11 @@ app.use(cors({
         credentials: true
 }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.get("/", (req, res) => {
+        res.send("Hello i am server and i am running");
+});
 
 import documentRoutes from "./routes/document.routes.js";
 app.use("/api/document", documentRoutes);
