@@ -22,7 +22,6 @@ const ExecutionOverview = () => {
         ]);
       } catch (error) {
         console.error("Error fetching counts:", error);
-        // Optionally handle error, show message, keep counts at 0, etc.
       }
     };
 

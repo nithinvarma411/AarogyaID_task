@@ -17,7 +17,6 @@ const StatsCard = ({ status, count, label }) => {
     <>
       <div className="flex-1 bg-white rounded-lg border border-gray-200 p-6">
         <div className="flex flex-col justify-between md:flex-row md:items-center md:gap-20 gap-4">
-          {/* Status Badge */}
           <div>
             <span
                 className={`flex items-center gap-1 px-2 py-1 rounded text-xs font-medium ${colorClasses[status]}`}
@@ -27,7 +26,6 @@ const StatsCard = ({ status, count, label }) => {
             </span>
           </div>
 
-          {/* Count + Label Group */}
           <div className="flex items-baseline gap-6">
             <div className="text-3xl font-bold text-gray-900">{count}</div>
             <div className="text-sm text-gray-500">{label}</div>

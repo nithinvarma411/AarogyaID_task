@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Home, Boxes, Cpu, FilePlus, FileSearch, Scale, Shield } from 'lucide-react';
 
 const Sidebar = () => {
-  const [activeIndex, setActiveIndex] = useState(0); // default first item active
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const menuItems = [
     { icon: Home },

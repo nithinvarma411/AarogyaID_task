@@ -75,7 +75,6 @@ const TableComponents = () => {
   return (
     <div className="bg-white rounded-lg border border-gray-200">
       <div className="p-6">
-        {/* Table Header */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-4">
             <h3 className="text-lg font-semibold text-gray-900">
@@ -101,7 +100,6 @@ const TableComponents = () => {
           </div>
         </div>
 
-        {/* Loader */}
         {loading ? (
           <div className="text-center py-6 text-gray-500">
             Loading documents...
@@ -199,7 +197,6 @@ const TableComponents = () => {
           </div>
         )}
 
-        {/* Pagination */}
         <div className="flex items-center justify-between mt-6">
           <div className="border border-gray-400 rounded-lg hover:bg-gray-100">
             <button
