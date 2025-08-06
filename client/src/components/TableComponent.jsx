@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { RefreshCw, Calendar } from "lucide-react";
+import DocumentDetails from "./DocumentDetails";
 
 const TableComponents = () => {
   const [documents, setDocuments] = useState([]);
@@ -8,6 +9,7 @@ const TableComponents = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [totalPages, setTotalPages] = useState(1);
+  const [selectedDocument, setSelectedDocument] = useState(null);
 
   useEffect(() => {
     const fetchDocuments = async () => {
@@ -144,11 +146,12 @@ const TableComponents = () => {
                 {documents.map((doc, index) => (
                   <tr
                     key={doc._id}
-                    className={`hover:bg-gray-50 ${
+                    className={`hover:bg-gray-50 cursor-pointer ${
                       index !== documents.length - 1
                         ? "border-b border-gray-400"
                         : ""
                     }`}
+                    onClick={() => setSelectedDocument(doc)}
                   >
                     <td className="py-4 text-sm text-gray-900">{doc._id}</td>
                     <td className="py-4 text-sm text-gray-900">
@@ -237,6 +240,13 @@ const TableComponents = () => {
           </div>
         </div>
       </div>
+
+      {selectedDocument && (
+        <DocumentDetails
+          document={selectedDocument}
+          onClose={() => setSelectedDocument(null)}
+        />
+      )}
     </div>
   );
 };
