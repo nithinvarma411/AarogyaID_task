@@ -112,6 +112,12 @@ export default function TaskOne() {
           the pictures but i did the animation.
         </h1>
       </div>
+
+      <div className="text-center pt-10">
+        <h1 className="text-6xl font-semibold text-gray-900 pb-5">Seamless Access with privacy</h1>
+        <p className="text-3xl text-gray-600">Giving you access to your medical records, anytime, anywhere.</p>
+      </div>
+
       <div className="flex flex-col items-center justify-center min-h-screen">
         <div
           className="flex flex-start items-center gap-10 relative"
